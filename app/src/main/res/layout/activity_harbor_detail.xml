@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textDetailName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textDetailCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textDetailLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textDetailDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="15sp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:padding="12dp"
+            android:stretchColumns="1">
+
+            <TableRow>
+                <TextView android:text="天氣" style="@style/DetailLabel" />
+                <TextView android:id="@+id/textDetailWeather" style="@style/DetailValue" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="溫度" style="@style/DetailLabel" />
+                <TextView android:id="@+id/textDetailTemperature" style="@style/DetailValue" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="風速" style="@style/DetailLabel" />
+                <TextView android:id="@+id/textDetailWind" style="@style/DetailValue" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="浪高" style="@style/DetailLabel" />
+                <TextView android:id="@+id/textDetailWave" style="@style/DetailValue" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="降雨機率" style="@style/DetailLabel" />
+                <TextView android:id="@+id/textDetailRain" style="@style/DetailValue" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="潮汐" style="@style/DetailLabel" />
+                <TextView android:id="@+id/textDetailTide" style="@style/DetailValue" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="更新時間" style="@style/DetailLabel" />
+                <TextView android:id="@+id/textDetailUpdate" style="@style/DetailValue" />
+            </TableRow>
+        </TableLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonFavorite"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:text="加入 / 移除最愛"
+            app:cornerRadius="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonMap"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="查看 Google Map 位置"
+            app:cornerRadius="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSettings"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="設定提醒條件"
+            app:cornerRadius="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonBack"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="返回首頁"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
+</ScrollView>

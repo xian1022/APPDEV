@@ -1,0 +1,54 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.fishingharboralert'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'com.example.fishingharboralert'
+        minSdk 24
+        targetSdk 36
+        versionCode 1
+        versionName '1.0'
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        manifestPlaceholders = [
+                mapsApiKey: localPropertiesValue('MAPS_API_KEY', ''),
+        ]
+        buildConfigField 'String', 'WEATHER_API_KEY', "\"${localPropertiesValue('WEATHER_API_KEY', '')}\""
+        buildConfigField 'String', 'API_BASE_URL', '"https://example.com/"'
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+}
+
+static String localPropertiesValue(String key, String fallback) {
+    Properties properties = new Properties()
+    File file = new File('local.properties')
+    if (file.exists()) {
+        file.withInputStream { properties.load(it) }
+    }
+    return properties.getProperty(key, fallback)
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'com.google.android.material:material:1.13.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    implementation 'androidx.room:room-runtime:2.8.4'
+    annotationProcessor 'androidx.room:room-compiler:2.8.4'
+
+    implementation 'com.squareup.retrofit2:retrofit:3.0.0'
+    implementation 'com.squareup.retrofit2:converter-gson:3.0.0'
+    implementation 'com.google.android.gms:play-services-maps:19.2.0'
+    implementation 'com.google.android.gms:play-services-location:21.3.0'
+
+    testImplementation 'junit:junit:4.13.2'
+}

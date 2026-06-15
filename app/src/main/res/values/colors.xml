@@ -1,0 +1,12 @@
+<resources>
+    <color name="color_primary">#006B5F</color>
+    <color name="color_primary_dark">#004D43</color>
+    <color name="color_accent">#F2A541</color>
+    <color name="screen_background">#F5FAF8</color>
+    <color name="surface_card">#FFFFFF</color>
+    <color name="text_primary">#17332E</color>
+    <color name="text_secondary">#5D716D</color>
+    <color name="safe_green">#2E7D32</color>
+    <color name="caution_yellow">#F9A825</color>
+    <color name="danger_red">#C62828</color>
+</resources>

@@ -1,0 +1,22 @@
+# Android / Gradle
+.gradle/
+build/
+app/build/
+gradle/gradle-daemon-jvm.properties
+local.properties
+*.apk
+*.aab
+
+# Android Studio
+.idea/
+*.iml
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
