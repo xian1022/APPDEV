@@ -277,9 +277,11 @@ h1 {
 
 h2 {
   margin-bottom: 1rem;
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  line-height: 1.1;
+  font-size: clamp(2rem, 3.75vw, 3.35rem);
+  line-height: 1.18;
   letter-spacing: 0;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
 }
 
 h3 {
@@ -415,14 +417,15 @@ h3 {
 .section-heading {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
-  gap: 2rem;
+  column-gap: 2rem;
+  row-gap: 0.85rem;
   align-items: end;
   margin-bottom: 2rem;
 }
 
 .section-heading .section-kicker {
   grid-column: 1 / -1;
-  margin-bottom: -1.2rem;
+  margin-bottom: 0;
 }
 
 .section-heading h2 {
@@ -435,7 +438,15 @@ h3 {
 
 .section-heading.compact {
   display: block;
-  max-width: 760px;
+  max-width: 860px;
+}
+
+.section-heading.compact .section-kicker {
+  margin-bottom: 1rem;
+}
+
+.section-heading.compact h2 {
+  max-width: 780px;
 }
 
 .section-heading.compact p:not(.section-kicker) {
