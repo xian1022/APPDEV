@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>漁港天氣提醒 App 展示</title>
+    <meta
+      name="description"
+      content="漁港天氣提醒 App 展示網站，呈現台灣漁港天氣、安全分級、提醒設定與地圖定位功能。"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23007967'/%3E%3Cpath d='M12 38c9 0 9-8 18-8s9 8 18 8' fill='none' stroke='white' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M18 25c8-8 18-10 30-7-7 6-15 13-30 7Z' fill='%23f3a93d'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要內容</a>
+
+    <header class="site-header" aria-label="網站導覽">
+      <a class="brand" href="#top" aria-label="回到首頁">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>漁港天氣提醒</span>
+      </a>
+      <nav id="site-menu" class="nav-links" aria-label="主要導覽">
+        <a href="#screens">畫面展示</a>
+        <a href="#features">功能亮點</a>
+        <a href="#workflow">使用流程</a>
+        <a href="#architecture">技術架構</a>
+      </nav>
+      <a class="nav-cta" href="#screens">查看 App</a>
+      <button class="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false">
+        <span class="sr-only">開啟導覽選單</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <img src="image/app_main_screenshot.png" alt="" />
+        </div>
+        <div class="hero-content reveal">
+          <p class="eyebrow">Taiwan Harbor Weather Safety</p>
+          <h1 id="hero-title">漁港天氣提醒 App</h1>
+          <p class="hero-copy">
+            將風速、浪高與降雨風險轉成清楚的安全分級，讓使用者在出發前快速判斷漁港與海岸活動是否合適。
+          </p>
+          <div class="hero-actions" aria-label="主要行動">
+            <a class="button primary" href="#screens">瀏覽畫面</a>
+            <a class="button secondary" href="#features">看功能亮點</a>
+          </div>
+        </div>
+        <div class="hero-panel reveal" aria-label="App 指標摘要">
+          <div>
+            <strong>8</strong>
+            <span>代表漁港</span>
+          </div>
+          <div>
+            <strong>3</strong>
+            <span>安全等級</span>
+          </div>
+          <div>
+            <strong>Room</strong>
+            <span>本機資料</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-band" aria-label="產品定位">
+        <div class="section-inner intro-grid">
+          <p class="section-kicker">為海岸活動做的判斷介面</p>
+          <h2>把複雜天氣資料，整理成一眼能懂的出港參考。</h2>
+          <p>
+            App 以台灣漁港為核心場景，整合 mock 天氣資料、風浪安全評估、最愛漁港、提醒偏好與地圖定位，
+            讓展示重點不只停在畫面，而是完整呈現使用情境與技術整合。
+          </p>
+        </div>
+      </section>
+
+      <section id="screens" class="screens-section" aria-labelledby="screens-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">Screens</p>
+            <h2 id="screens-title">主要畫面展示</h2>
+            <p>
+              三個畫面對應最重要的使用流程：瀏覽漁港、查看天氣細節、調整個人提醒條件。
+            </p>
+          </div>
+
+          <div class="showcase">
+            <article class="screen-card reveal">
+              <img src="image/app_main_screenshot.png" alt="App 主畫面，列出台灣代表漁港與安全等級。" />
+              <div class="screen-caption">
+                <span>01</span>
+                <h3>漁港總覽</h3>
+                <p>卡片化呈現地點、風速、浪高與安全標籤，適合快速掃描。</p>
+              </div>
+            </article>
+            <article class="screen-card feature-screen reveal">
+              <img src="image/app_detail_keelung.png" alt="基隆港詳細頁，顯示天氣、溫度、風速、浪高與操作按鈕。" />
+              <div class="screen-caption">
+                <span>02</span>
+                <h3>天氣細節</h3>
+                <p>將單一漁港的氣象資訊與可用行動集中在同一頁。</p>
+              </div>
+            </article>
+            <article class="screen-card reveal">
+              <img src="image/app_settings.png" alt="提醒設定頁，提供風速、浪高與通知偏好設定。" />
+              <div class="screen-caption">
+                <span>03</span>
+                <h3>提醒設定</h3>
+                <p>用清楚的表單控制風速、浪高與模擬推播偏好。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features-section" aria-labelledby="features-title">
+        <div class="section-inner">
+          <div class="section-heading compact">
+            <p class="section-kicker">UX Highlights</p>
+            <h2 id="features-title">明亮、直接、以判斷效率為核心</h2>
+            <p>
+              設計重點放在「快速理解風險」與「能立即採取行動」。使用者不需要自行解讀風速、浪高與天候資料，
+              App 會把資料整理成明確狀態，並把下一步操作放在同一個流程中。
+            </p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card reveal">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3 19 6v5c0 4.6-2.8 8.2-7 10-4.2-1.8-7-5.4-7-10V6l7-3Z" />
+                  <path d="m8.5 12 2.2 2.2 4.8-5" />
+                </svg>
+              </div>
+              <span class="feature-index">A</span>
+              <h3>安全分級優先</h3>
+              <p>安全、注意、危險三種狀態用明確色彩與文字呈現，讓使用者不用比對數值也能先掌握風險。</p>
+            </article>
+            <article class="feature-card reveal">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="8" />
+                  <path d="m14.8 9.2-2.1 5.4-5.5 2.2 2.1-5.5 5.5-2.1Z" />
+                </svg>
+              </div>
+              <span class="feature-index">B</span>
+              <h3>漁港情境導向</h3>
+              <p>以台灣代表漁港作為入口，從地點列表、單港細節到地圖定位，貼近實際查詢情境。</p>
+            </article>
+            <article class="feature-card reveal">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 14c2.2-2.2 4.4-2.2 6.6 0s4.4 2.2 6.6 0S21 11.8 22 13" />
+                  <path d="M4 18c2.2-2.2 4.4-2.2 6.6 0s4.4 2.2 6.6 0S21 15.8 22 17" />
+                  <path d="M8 6h8l2 5H6l2-5Z" />
+                </svg>
+              </div>
+              <span class="feature-index">C</span>
+              <h3>離線展示友善</h3>
+              <p>Weather API key 空白時會使用 mock data fallback，課堂 demo、簡報與離線展示都能穩定呈現。</p>
+            </article>
+            <article class="feature-card reveal">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9Z" />
+                  <path d="M10 20a2 2 0 0 0 4 0" />
+                  <path d="M12 3V1.8" />
+                </svg>
+              </div>
+              <span class="feature-index">D</span>
+              <h3>偏好可保存</h3>
+              <p>Room 與 SharedPreferences 保存漁港資料、最愛清單與提醒偏好，支撐可延續的個人化使用。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="workflow" class="workflow-section" aria-labelledby="workflow-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">User Flow</p>
+            <h2 id="workflow-title">從打開 App 到做出出港判斷</h2>
+            <p>
+              展示頁補上完整使用情境，讓觀看者能理解 App 不只是資料列表，而是一條面向海岸活動的決策流程。
+            </p>
+          </div>
+
+          <div class="workflow-grid">
+            <article class="workflow-step reveal">
+              <div class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 6h16" />
+                  <path d="M4 12h12" />
+                  <path d="M4 18h9" />
+                  <path d="M17 15l3 3 2-5" />
+                </svg>
+              </div>
+              <span>01</span>
+              <h3>掃描漁港狀態</h3>
+              <p>
+                首頁列出台灣代表漁港，卡片中直接呈現縣市、簡介、風速、浪高、天氣與安全標籤。
+                使用者能先找出安全或需要注意的地點。
+              </p>
+            </article>
+            <article class="workflow-step reveal">
+              <div class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M6 3h12v18H6z" />
+                  <path d="M9 8h6" />
+                  <path d="M9 12h6" />
+                  <path d="M9 16h3" />
+                </svg>
+              </div>
+              <span>02</span>
+              <h3>查看單一漁港細節</h3>
+              <p>
+                點進港口後，頁面集中顯示溫度、風速、浪高、降雨機率、潮汐與資料更新時間，
+                並用狀態條說明目前風浪是否穩定。
+              </p>
+            </article>
+            <article class="workflow-step reveal">
+              <div class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 21s7-5.2 7-11a7 7 0 0 0-14 0c0 5.8 7 11 7 11Z" />
+                  <circle cx="12" cy="10" r="2.4" />
+                </svg>
+              </div>
+              <span>03</span>
+              <h3>加入最愛與前往地圖</h3>
+              <p>
+                使用者可以把常去漁港加入最愛，也能從詳細頁跳到 Google Map 位置，
+                把天氣判斷與實際路線規劃接在一起。
+              </p>
+            </article>
+            <article class="workflow-step reveal">
+              <div class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 6h14" />
+                  <path d="M5 12h14" />
+                  <path d="M5 18h14" />
+                  <circle cx="9" cy="6" r="2" />
+                  <circle cx="15" cy="12" r="2" />
+                  <circle cx="11" cy="18" r="2" />
+                </svg>
+              </div>
+              <span>04</span>
+              <h3>設定提醒門檻</h3>
+              <p>
+                在設定頁調整最大風速、最大浪高與模擬推播偏好。當漁港達到危險條件時，
+                App 可用 AlertDialog 提醒使用者降低風險。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="details-section" aria-labelledby="details-title">
+        <div class="section-inner details-layout">
+          <div class="details-copy reveal">
+            <p class="section-kicker">Evaluation Logic</p>
+            <h2 id="details-title">風險不是只顯示數字，而是轉成可理解的建議</h2>
+            <p>
+              App 的核心是把風速與浪高轉成安全等級：低風速與低浪高顯示安全；中等風浪顯示注意；
+              若風速或浪高超過門檻，則標示危險。這種設計讓使用者先看到結論，再視需求閱讀細節。
+            </p>
+          </div>
+
+          <div class="logic-grid">
+            <article class="logic-card reveal safe">
+              <strong>安全</strong>
+              <span>風速低於 8 m/s，浪高低於 1.0 m</span>
+              <p>適合一般岸邊活動，使用綠色標籤建立安心感。</p>
+            </article>
+            <article class="logic-card reveal caution">
+              <strong>注意</strong>
+              <span>風速 8 至 12 m/s，或浪高 1.0 至 2.0 m</span>
+              <p>提醒使用者留意天候變化，避免把中等風險誤判成安全。</p>
+            </article>
+            <article class="logic-card reveal danger">
+              <strong>危險</strong>
+              <span>風速高於 12 m/s，或浪高高於 2.0 m</span>
+              <p>用紅色狀態與警示對話框強化危險訊號，讓決策更即時。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="presentation-section" aria-labelledby="presentation-title">
+        <div class="section-inner presentation-layout">
+          <div class="presentation-copy reveal">
+            <p class="section-kicker">Presentation Notes</p>
+            <h2 id="presentation-title">展示時可以強調的三個面向</h2>
+          </div>
+          <div class="presentation-list">
+            <article class="presentation-item reveal">
+              <h3>使用者價值</h3>
+              <p>把海象資料整理成可行動的安全判斷，降低一般使用者閱讀氣象數據的門檻。</p>
+            </article>
+            <article class="presentation-item reveal">
+              <h3>功能完整度</h3>
+              <p>包含首頁列表、詳細頁、地圖、提醒設定、最愛與本機資料儲存，流程比單純展示頁更完整。</p>
+            </article>
+            <article class="presentation-item reveal">
+              <h3>工程整合</h3>
+              <p>整合 Android UI、Room、Retrofit、Google Maps/GPS 與 Flask backend，可說明前後端與資料層設計。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="architecture" class="architecture-section" aria-labelledby="architecture-title">
+        <div class="section-inner architecture-layout">
+          <div class="architecture-copy reveal">
+            <p class="section-kicker">Architecture</p>
+            <h2 id="architecture-title">從 Android UI 到 Flask API 的完整展示</h2>
+            <p>
+              專案使用 Java 與 XML Layout 建構 Android 介面，搭配 RecyclerView、Room、Retrofit、Google Maps/GPS
+              與 Flask backend。展示網站保留這張系統圖，讓作品頁可以同時說明視覺成果與工程結構。
+            </p>
+            <dl class="tech-list">
+              <div>
+                <dt>Frontend</dt>
+                <dd>Java Activity、XML Layout、Material Components</dd>
+              </div>
+              <div>
+                <dt>Data</dt>
+                <dd>Room Database、SharedPreferences、mock weather fallback</dd>
+              </div>
+              <div>
+                <dt>Integration</dt>
+                <dd>Retrofit、Google Maps SDK、Flask API</dd>
+              </div>
+            </dl>
+          </div>
+          <figure class="diagram-frame reveal">
+            <img
+              src="image/fishing_harbor_weather_alert_system_diagram.png"
+              alt="漁港天氣提醒 App 系統架構圖，包含 Android App、資料層、API 與後端服務。"
+            />
+            <figcaption>系統架構圖</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Fishing Harbor Weather Alert App</p>
+      <p>Android Studio project showcase</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
