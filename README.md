@@ -26,7 +26,7 @@ docs/slides_outline.md 簡報大綱
 
 ## Android Studio 執行方式
 
-1. 用 Android Studio 開啟本資料夾：`C:\Users\39165\Desktop\APPDEV`
+1. 用 Android Studio 開啟本資料夾：`APPDEV`
 2. 等待 Gradle Sync 完成。
 3. 確認 `local.properties` 內有 Android SDK 路徑：
 
